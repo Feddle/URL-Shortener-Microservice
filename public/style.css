@@ -1,0 +1,13 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+code {
+  background-color: pink;
+}
+#main {  
+  margin: auto;
+  width: 600px;
+}
