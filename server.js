@@ -26,8 +26,8 @@ app.get("/new/*", (req, res, next) => {
   }
 }, (req, res) => {
   mongo.connect(url, function (err, client) {
-      if (err) res.end("Error connectin to database");
-      let original_url = req.params[0];
+      if (err) res.end("Error connectin to database");      
+      let original_url = req.originalUrl.substring(5);    
       console.log("Connection established to database");
       const glitch_db = client.db("glitch");
       const coll = glitch_db.collection('urlShortener'); 
